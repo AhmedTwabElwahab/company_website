@@ -1,0 +1,11 @@
+.notes,
+.input-style
+{
+    background-color: #d1f3ff;
+    &:focus
+    {
+        background-color: #d1f3ff;
+        box-shadow: unset;
+        color: #2a2a2a
+    }
+}
