@@ -43,7 +43,7 @@ function Projects() {
     <>
         <div className="container-xxl py-5">
             <div className="container px-lg-5">
-                <div className="section-title position-relative text-center mb-5 pb-2 wow fadeInUp"
+                <div className="section-title sc-title position-relative text-center mb-5 pb-2 wow fadeInUp"
                      data-wow-delay="0.1s">
                     <h6 className="position-relative d-inline text-primary ps-4">Our Projects</h6>
                     <h2 className="mt-2">Recently Launched Projects</h2>

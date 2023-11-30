@@ -1,6 +1,9 @@
 import img from '../assets/images/newsletter.png'
-function Newsletter() {
+import {MainContext} from "../context/MainContext.jsx";
+import {useContext} from "react";
 
+function Newsletter() {
+    const [ dir, setDir ] = useContext(MainContext);
   return (
     <>
         <div className="container-xxl primary-bg newsletter my-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -13,7 +16,7 @@ function Newsletter() {
                             <input className="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
                                    placeholder="Enter Your Email" style={{height:'48px'}} />
                                 <button type="button"
-                                        className="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                        className={(dir !== "rtl" ? 'end-0 ' : 'start-0 ') + "btn shadow-none position-absolute top-0 mt-1 me-2"}><i
                                     className="fa fa-paper-plane text-primary fs-4"></i></button>
                         </div>
                     </div>

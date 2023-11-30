@@ -5,7 +5,8 @@ import HeaderStyle from "../components/HeaderStyle.jsx";
 import Newsletter from "../components/Newsletter.jsx";
 import Team from "../components/Team.jsx";
 function About() {
-  return (
+
+    return (
     <>
         <div className="container-xxl position-relative p-0">
             <Navbar/>

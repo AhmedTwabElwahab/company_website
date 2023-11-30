@@ -1,5 +1,8 @@
 import img from '../assets/images/about.jpg'
+import {useContext} from "react";
+import {MainContext} from "../context/MainContext.jsx";
 function AboutUs() {
+    const [ dir, setDir ] = useContext(MainContext);
 
   return (
     <>
@@ -7,7 +10,7 @@ function AboutUs() {
             <div className="container px-lg-5">
                 <div className="row g-5">
                     <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div className="section-title position-relative mb-4 pb-2">
+                        <div className="section-title section-title-rtl position-relative mb-4 pb-2">
                             <h6 className="position-relative text-primary ps-4">About Us</h6>
                             <h2 className="mt-2">The best SEO solution with 10 years of experience</h2>
                         </div>
@@ -26,14 +29,14 @@ function AboutUs() {
                             </div>
                         </div>
                         <div className="d-flex align-items-center mt-4">
-                            <a className="btn primary-btn rounded-pill px-4 me-3" href="">Read More</a>
-                            <a className="btn primary-btn-outline btn-square me-3" href=""><i
+                            <a className={ (dir === 'ltr' ? 'me-3': 'ms-3') + " btn primary-btn rounded-pill px-4"} href="">Read More</a>
+                            <a className={ (dir === 'ltr' ? 'me-3': 'ms-3') + " btn primary-btn-outline btn-square"} href=""><i
                                 className="fab fa-facebook-f"></i></a>
-                            <a className="btn primary-btn-outline btn-square me-3" href=""><i
+                            <a className={ (dir === 'ltr' ? 'me-3': 'ms-3') + " btn primary-btn-outline btn-square"} href=""><i
                                 className="fab fa-twitter"></i></a>
-                            <a className="btn primary-btn-outline btn-square me-3" href=""><i
+                            <a className={ (dir === 'ltr' ? 'me-3': 'ms-3') + " btn primary-btn-outline btn-square"} href=""><i
                                 className="fab fa-instagram"></i></a>
-                            <a className="btn primary-btn-outline btn-square" href=""><i
+                            <a className={ (dir === 'ltr' ? '': 'ms-3') + " btn primary-btn-outline btn-square"} href=""><i
                                 className="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>

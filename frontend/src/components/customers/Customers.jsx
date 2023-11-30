@@ -1,139 +1,276 @@
 import client1 from '../../assets/images/team-1.jpg';
 import client2 from '../../assets/images/team-2.jpg';
 import client3 from '../../assets/images/team-3.jpg';
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+import quote from '../../assets/images/quote.png';
+import headingLine from '../../assets/images/line-dec.png';
 import './customers.scss';
 function Customers() {
-    const options = {
-        loop: true,
-        margin: 20,
-        dots: false,
-        nav: true,
-        autoplay: true,
-        autoplayHoverPause: true,
-        navText: [
-            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-        ],
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 2
-            },
-            1000: {
-                items: 2
-            }
-        }
-    };
     return (
     <>
-        <section className="client_section layout_padding">
+        <div id="clients" className="the-clients">
             <div className="container">
-                <div className="section-title position-relative text-center mb-5 pb-2 wow fadeInUp"
-                     data-wow-delay="0.1s">
-                    <h6 className="position-relative d-inline text-primary ps-4">Our Customers</h6>
-                    <h2 className="mt-2"> What says </h2>
+                <div className="row justify-content-around">
+                    <div className="col-lg-8">
+                        <div className="section-title sc-title position-relative text-center mb-5 pb-2 wow fadeInUp"
+                             data-wow-delay="0.1s">
+                            <h6 className="position-relative d-inline text-primary ps-4">Our Clients</h6>
+                            <h2 className="mt-2">Check What <em>The Clients Say</em> About Our App Dev</h2>
+                        </div>
+                    </div>
+                    <div className="col-lg-12">
+                        <div className="naccs">
+                            <div className="grid">
+                                <div className="row">
+                                    <div className="col-lg-7 align-self-center">
+                                        <div className="menu">
+                                            <div className="first-thumb active">
+                                                <div className="thumb">
+                                                    <div className="row">
+                                                        <div className="col-lg-4 col-sm-4 col-12">
+                                                            <h4>David Martino Co</h4>
+                                                            <span className="date">30 November 2021</span>
+                                                        </div>
+                                                        <div className="col-lg-4 col-sm-4 d-none d-sm-block">
+                                                            <span className="category">Financial Apps</span>
+                                                        </div>
+                                                        <div className="col-lg-4 col-sm-4 col-12">
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <span className="rating">4.8</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div className="thumb">
+                                                    <div className="row">
+                                                        <div className="col-lg-4 col-sm-4 col-12">
+                                                            <h4>Jake Harris Nyo</h4>
+                                                            <span className="date">29 November 2021</span>
+                                                        </div>
+                                                        <div className="col-lg-4 col-sm-4 d-none d-sm-block">
+                                                            <span className="category">Digital Business</span>
+                                                        </div>
+                                                        <div className="col-lg-4 col-sm-4 col-12">
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <span className="rating">4.5</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div className="thumb">
+                                                    <div className="row">
+                                                        <div className="col-lg-4 col-sm-4 col-12">
+                                                            <h4>May Catherina</h4>
+                                                            <span className="date">27 November 2021</span>
+                                                        </div>
+                                                        <div className="col-lg-4 col-sm-4 d-none d-sm-block">
+                                                            <span className="category">Business &amp; Economics</span>
+                                                        </div>
+                                                        <div className="col-lg-4 col-sm-4 col-12">
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <span className="rating">4.7</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div className="thumb">
+                                                    <div className="row">
+                                                        <div className="col-lg-4 col-sm-4 col-12">
+                                                            <h4>Random User</h4>
+                                                            <span className="date">24 November 2021</span>
+                                                        </div>
+                                                        <div className="col-lg-4 col-sm-4 d-none d-sm-block">
+                                                            <span className="category">New App Ecosystem</span>
+                                                        </div>
+                                                        <div className="col-lg-4 col-sm-4 col-12">
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <span className="rating">3.9</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="last-thumb">
+                                                <div className="thumb">
+                                                    <div className="row">
+                                                        <div className="col-lg-4 col-sm-4 col-12">
+                                                            <h4>Mark Amber Do</h4>
+                                                            <span className="date">21 November 2021</span>
+                                                        </div>
+                                                        <div className="col-lg-4 col-sm-4 d-none d-sm-block">
+                                                            <span className="category">Web Development</span>
+                                                        </div>
+                                                        <div className="col-lg-4 col-sm-4 col-12">
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <i className="fa fa-star"></i>
+                                                            <span className="rating">4.3</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-5">
+                                        <ul className="nacc">
+                                            <li className="active">
+                                                <div>
+                                                    <div className="thumb">
+                                                        <div className="row">
+                                                            <div className="col-lg-12">
+                                                                <div className="client-content">
+                                                                    <img src={quote} alt="" />
+                                                                        <p>“Lorem ipsum dolor sit amet, consectetur
+                                                                            adpiscing elit, sed do eismod tempor idunte
+                                                                            ut labore et dolore magna aliqua darwin
+                                                                            kengan
+                                                                            lorem ipsum dolor sit amet, consectetur
+                                                                            picing elit massive big blasta.”</p>
+                                                                </div>
+                                                                <div className="down-content">
+                                                                    <img src={client1} alt="" />
+                                                                        <div className="right-content">
+                                                                            <h4>David Martino</h4>
+                                                                            <span>CEO of David Company</span>
+                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <div className="thumb">
+                                                        <div className="row">
+                                                            <div className="col-lg-12">
+                                                                <div className="client-content">
+                                                                    <img src={quote} alt="" />
+                                                                        <p>“CTO, Lorem ipsum dolor sit amet, consectetur
+                                                                            adpiscing elit, sed do eismod tempor idunte
+                                                                            ut labore et dolore magna aliqua darwin
+                                                                            kengan
+                                                                            lorem ipsum dolor sit amet, consectetur
+                                                                            picing elit massive big blasta.”</p>
+                                                                </div>
+                                                                <div className="down-content">
+                                                                    <img src={client2} alt="" />
+                                                                        <div className="right-content">
+                                                                            <h4>Jake H. Nyo</h4>
+                                                                            <span>CTO of Digital Company</span>
+                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <div className="thumb">
+                                                        <div className="row">
+                                                            <div className="col-lg-12">
+                                                                <div className="client-content">
+                                                                    <img src={quote} alt="" />
+                                                                        <p>“May, Lorem ipsum dolor sit amet, consectetur
+                                                                            adpiscing elit, sed do eismod tempor idunte
+                                                                            ut labore et dolore magna aliqua darwin
+                                                                            kengan
+                                                                            lorem ipsum dolor sit amet, consectetur
+                                                                            picing elit massive big blasta.”</p>
+                                                                </div>
+                                                                <div className="down-content">
+                                                                    <img src={client2} alt="" />
+                                                                        <div className="right-content">
+                                                                            <h4>May C.</h4>
+                                                                            <span>Founder of Catherina Co.</span>
+                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <div className="thumb">
+                                                        <div className="row">
+                                                            <div className="col-lg-12">
+                                                                <div className="client-content">
+                                                                    <img src={quote} alt="" />
+                                                                        <p>“Lorem ipsum dolor sit amet, consectetur
+                                                                            adpiscing elit, sed do eismod tempor idunte
+                                                                            ut labore et dolore magna aliqua darwin
+                                                                            kengan
+                                                                            lorem ipsum dolor sit amet, consectetur
+                                                                            picing elit massive big blasta.”</p>
+                                                                </div>
+                                                                <div className="down-content">
+                                                                    <img src={client3} alt=""/>
+                                                                        <div className="right-content">
+                                                                            <h4>Random Staff</h4>
+                                                                            <span>Manager, Digital Company</span>
+                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <div className="thumb">
+                                                        <div className="row">
+                                                            <div className="col-lg-12">
+                                                                <div className="client-content">
+                                                                    <img src={quote} alt=""/>
+                                                                        <p>“Mark, Lorem ipsum dolor sit amet,
+                                                                            consectetur adpiscing elit, sed do eismod
+                                                                            tempor idunte ut labore et dolore magna
+                                                                            aliqua darwin kengan
+                                                                            lorem ipsum dolor sit amet, consectetur
+                                                                            picing elit massive big blasta.”</p>
+                                                                </div>
+                                                                <div className="down-content">
+                                                                    <img src={client1} alt="" />
+                                                                        <div className="right-content">
+                                                                            <h4>Mark Am</h4>
+                                                                            <span>CTO, Amber Do Company</span>
+                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <OwlCarousel className="owl-theme owl-carousel" loop margin={15} nav {...options}>
-                    <div className="item">
-                        <div className="box">
-                            <div className="img-box">
-                                <img src={client1} alt="" className="box-img" />
-                            </div>
-                            <div className="detail-box">
-                                <div className="client_id">
-                                    <div className="client_info">
-                                        <h6>
-                                            LusDen
-                                        </h6>
-                                        <p>
-                                            magna aliqua. Ut
-                                        </p>
-                                    </div>
-                                    <i className="fa fa-quote-left" aria-hidden="true"></i>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="box">
-                            <div className="img-box">
-                                <img src={client2} alt="" className="box-img" />
-                            </div>
-                            <div className="detail-box">
-                                <div className="client_id">
-                                    <div className="client_info">
-                                        <h6>
-                                            Zen Court
-                                        </h6>
-                                        <p>
-                                            magna aliqua. Ut
-                                        </p>
-                                    </div>
-                                    <i className="fa fa-quote-left" aria-hidden="true"></i>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="box">
-                            <div className="img-box">
-                                <img src={client3} alt="" className="box-img" />
-                            </div>
-                            <div className="detail-box">
-                                <div className="client_id">
-                                    <div className="client_info">
-                                        <h6>
-                                            LusDen
-                                        </h6>
-                                        <p>
-                                            magna aliqua. Ut
-                                        </p>
-                                    </div>
-                                    <i className="fa fa-quote-left" aria-hidden="true"></i>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="box">
-                            <div className="img-box">
-                                <img src={client2} alt="" className="box-img" />
-                            </div>
-                            <div className="detail-box">
-                                <div className="client_id">
-                                    <div className="client_info">
-                                        <h6>
-                                            Zen Court
-                                        </h6>
-                                        <p>
-                                            magna aliqua. Ut
-                                        </p>
-                                    </div>
-                                    <i className="fa fa-quote-left" aria-hidden="true"></i>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                            </div>
-                        </div>
-                    </div>
-                </OwlCarousel>
             </div>
-        </section>
+        </div>
     </>
   )
 }

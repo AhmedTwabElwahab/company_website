@@ -1,0 +1,82 @@
+html[dir='rtl'] {
+    .team-item::after {
+        left: 3rem !important;
+        right: 0 !important;
+    }
+
+    .ps-4 {
+        padding-right: 1.5rem !important
+    }
+
+    .me-2 {
+        margin-left: .5rem !important;
+    }
+
+    .section-title-rtl {
+        &::before {
+            right: 0 !important;
+        }
+
+        &::after {
+            right: 50px;
+        }
+
+        .text-center {
+            &::before {
+                right: 50%;
+                margin-right: -25px;
+            }
+
+            &::after {
+                right: 50%;
+                margin-right: 25px;
+            }
+        }
+
+        h6 {
+            &::before {
+                right: 0;
+            }
+
+            &::after {
+                right: 3px;
+            }
+        }
+    }
+
+    .sc-title {
+        &::before {
+            //right: 0 !important;
+        }
+
+        &::after {
+            //right: 50px;
+        }
+
+        .text-center {
+            &::before {
+                right: 50%;
+                margin-right: -25px;
+            }
+
+            &::after {
+                right: 50%;
+                margin-right: 25px;
+            }
+        }
+
+        h6 {
+            &::before {
+                right: 0;
+            }
+
+            &::after {
+                right: 3px;
+            }
+        }
+    }
+
+    .section-title.text-center::after {
+        margin-left: -33px !important;
+    }
+}
