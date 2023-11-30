@@ -10,14 +10,11 @@ function HeaderStyle({PageName}) {
                     <div className="col-12 text-center">
                         <h1 className="text-white animated zoomIn">{PageName}</h1>
                         <hr className="bg-white mx-auto mt-0" style={{width: '90px'}} />
-                            <nav aria-label="breadcrumb">
-                                <ol className="breadcrumb justify-content-center">
-                                    <li className="breadcrumb-item">
-                                        <Link to={`/`} className="text-white">Home</Link>
-                                    </li>
-                                    <li className="breadcrumb-item text-white active" aria-current="page">{PageName}</li>
-                                </ol>
-                            </nav>
+                        <nav>
+                            <Link to={`/`} className="text-white">Home</Link>
+                            <Link to={``} className="text-white px-2">/</Link>
+                            <Link to={``} className="text-white">{PageName}</Link>
+                        </nav>
                     </div>
                 </div>
             </div>
