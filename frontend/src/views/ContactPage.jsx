@@ -7,7 +7,7 @@ function ContactPage() {
 
   return (
       <>
-          <div className="container-xxl position-relative p-0">
+          <div className=" position-relative p-0">
               <Navbar/>
               <HeaderStyle PageName={'Contact'}/>
           </div>

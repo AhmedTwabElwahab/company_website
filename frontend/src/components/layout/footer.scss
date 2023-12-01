@@ -1,0 +1,20 @@
+html[dir="rtl"]
+{
+    .footer .btn.btn-link
+    {
+        text-align: right !important;
+    }
+
+    .links_sc2 {
+        a{
+            i{
+                margin-left: 10px;
+                font-size: 10px;
+            }
+        }
+    }
+    .footer .btn.btn-link::before
+    {
+        content: unset;
+    }
+}

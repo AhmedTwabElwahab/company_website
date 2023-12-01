@@ -4,7 +4,7 @@ function HeaderStyle({PageName}) {
 
   return (
     <>
-        <div className="container-xxl py-5 primary-bg hero-header mb-5">
+        <div className=" py-5 primary-bg hero-header mb-5">
             <div className="container my-5 py-5 px-lg-5">
                 <div className="row g-5 py-5">
                     <div className="col-12 text-center">

@@ -8,7 +8,7 @@ import HeaderStyle from "../components/HeaderStyle.jsx";
 function TeamPage() {
   return (
       <>
-          <div className="container-xxl position-relative p-0">
+          <div className=" position-relative p-0">
               <Navbar/>
               <HeaderStyle PageName={'Team'}/>
           </div>

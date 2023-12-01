@@ -2,7 +2,7 @@ import './contact.scss'
 function Contact() {
   return (
       <>
-          <div className="container-xxl py-5">
+          <div className=" py-5">
               <div className="container px-lg-5">
                   <div className="row justify-content-center">
                       <div className="col-lg-7">

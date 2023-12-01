@@ -7,7 +7,7 @@ function service() {
 
   return (
     <>
-        <div className="container-xxl position-relative p-0">
+        <div className=" position-relative p-0">
             <Navbar show={true} className={'default_none'} />
             <HeaderStyle PageName={'Services'}/>
         </div>

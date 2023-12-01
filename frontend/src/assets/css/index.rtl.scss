@@ -79,4 +79,13 @@ html[dir='rtl'] {
     .section-title.text-center::after {
         margin-left: -33px !important;
     }
+
+    #portfolio-flters .btn::after
+    {
+        left: -2px;
+        right: unset;
+        border-right: 20px solid transparent;
+        border-left: 0 solid transparent;
+        border-bottom: 50px solid #ffffff;
+    }
 }

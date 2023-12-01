@@ -1,35 +1,33 @@
-import img from '../assets/images/about.jpg'
+import img from '../assets/images/about-img.png'
 import {useContext} from "react";
 import {MainContext} from "../context/MainContext.jsx";
+import i18next from "i18next";
 function AboutUs() {
     const [ dir, setDir ] = useContext(MainContext);
 
   return (
     <>
-        <div className="container-xxl py-5">
+        <div className=" py-5">
             <div className="container px-lg-5">
                 <div className="row g-5">
                     <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div className="section-title section-title-rtl position-relative mb-4 pb-2">
-                            <h6 className="position-relative text-primary ps-4">About Us</h6>
-                            <h2 className="mt-2">The best SEO solution with 10 years of experience</h2>
+                            <h6 className="position-relative text-primary ps-4">{i18next.t('about_us')}</h6>
+                            <h2 className="mt-2"> {i18next.t('about_header')}</h2>
                         </div>
-                        <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu
-                            diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem
-                            sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
+                        <p className="mb-4">{i18next.t('about_paragraph')}</p>
                         <div className="row g-3">
                             <div className="col-sm-6">
-                                <h6 className="mb-3"><i className="fa fa-check text-primary me-2"></i>Award Winning</h6>
-                                <h6 className="mb-0"><i className="fa fa-check text-primary me-2"></i>Professional Staff
-                                </h6>
+                                <h6 className="mb-3"><i className="fa fa-check text-primary me-2"></i>{i18next.t('about_h6_sc1')}</h6>
+                                <h6 className="mb-0"><i className="fa fa-check text-primary me-2"></i>{i18next.t('about_h6_sc2')}</h6>
                             </div>
                             <div className="col-sm-6">
-                                <h6 className="mb-3"><i className="fa fa-check text-primary me-2"></i>24/7 Support</h6>
-                                <h6 className="mb-0"><i className="fa fa-check text-primary me-2"></i>Fair Prices</h6>
+                                <h6 className="mb-3"><i className="fa fa-check text-primary me-2"></i>{i18next.t('about_h6_sc3')}</h6>
+                                <h6 className="mb-0"><i className="fa fa-check text-primary me-2"></i>{i18next.t('about_h6_sc4')}</h6>
                             </div>
                         </div>
                         <div className="d-flex align-items-center mt-4">
-                            <a className={ (dir === 'ltr' ? 'me-3': 'ms-3') + " btn primary-btn rounded-pill px-4"} href="">Read More</a>
+                            <a className={ (dir === 'ltr' ? 'me-3': 'ms-3') + " btn primary-btn rounded-pill px-4"} href="">{i18next.t('about_button')}</a>
                             <a className={ (dir === 'ltr' ? 'me-3': 'ms-3') + " btn primary-btn-outline btn-square"} href=""><i
                                 className="fab fa-facebook-f"></i></a>
                             <a className={ (dir === 'ltr' ? 'me-3': 'ms-3') + " btn primary-btn-outline btn-square"} href=""><i

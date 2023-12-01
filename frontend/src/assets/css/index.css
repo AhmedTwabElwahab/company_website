@@ -1,9 +1,15 @@
 /********** Template CSS **********/
+body
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 :root {
     /*--primary: #2124B1;*/
     --primary: #4b8ef1;
     /*--secondary: #4777F5;*/
-    --secondary: #9a5ae3;
+    --secondary: #4b8ef1;
     --light: #F7FAFF;
     --dark: #1D1D27;
 }
@@ -112,20 +118,21 @@ h6,
     position: relative;
     margin-left: 25px;
     padding: 35px 0;
-    color: var(--light) !important;
+    color: var(--light);
     outline: none;
     transition: .5s;
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
     padding: 20px 0;
-    color: var(--dark) !important;
+    color: var(--dark);
 }
 
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link.active {
-    color: var(--secondary) !important;
+.sticky-top.navbar-light .navbar-nav .nav-link:hover,
+.sticky-top.navbar-light .navbar-nav .nav-link.active {
+    color: var(--secondary);
 }
+
 
 .navbar-light .navbar-brand h1 {
     color: #FFFFFF;
@@ -155,7 +162,7 @@ h6,
     .sticky-top.navbar-light .navbar-nav .nav-link {
         padding: 10px 0;
         margin-left: 0;
-        color: var(--dark) !important;
+        color: var(--dark);
     }
 
     .navbar-light .navbar-brand h1 {
@@ -182,16 +189,36 @@ h6,
         background: #FFFFFF;
     }
 
-    .navbar-light .navbar-nav .nav-link::before {
+    .sticky-top.navbar-light .navbar-nav .nav-link::before,
+    .navbar-light .navbar-nav .nav-link::before
+    {
         position: absolute;
         content: "";
         width: 0;
         height: 2px;
         bottom: -1px;
         left: 50%;
-        background: var(--secondary);
         transition: .5s;
     }
+    .sticky-top.navbar-light .navbar-nav .nav-link::before
+    {
+        background: var(--secondary);
+    }
+    .navbar-light .navbar-nav .nav-link::before
+    {
+        background: #333;
+    }
+
+    .navbar-light .dropdown-toggle::after
+    {
+        color: #FFFFFF;
+    }
+
+    .sticky-top .dropdown-toggle::after
+    {
+        color: var(--primary);
+    }
+
 
     .navbar-light .navbar-nav .nav-link:hover::before,
     .navbar-light .navbar-nav .nav-link.active::before {
@@ -215,8 +242,8 @@ h6,
         url(../images/bg-dot.png),
         url(../images/bg-dot.png),
         url(../images/bg-round.png),
-        url(../images/bg-tree.png),
-        url(../images/bg-bottom-hero.png);
+        url(../images/bg-tree.png);
+        /*url(../images/bg-bottom-hero.png);*/
     background-position:
         10px 10px,
         bottom 190px right 10px,
@@ -550,4 +577,10 @@ h6,
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+.dropdown-menu
+{
+    min-width: unset;
+    width: 75px;
 }

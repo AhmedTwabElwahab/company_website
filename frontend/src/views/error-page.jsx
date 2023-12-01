@@ -6,7 +6,7 @@ import NotFound from "../components/NotFound.jsx";
 export default function ErrorPage() {
   return (
       <>
-          <div className="container-xxl position-relative p-0">
+          <div className=" position-relative p-0">
               <Navbar/>
               <HeaderStyle PageName={'Not Found'}/>
           </div>

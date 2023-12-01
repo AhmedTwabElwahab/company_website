@@ -4,17 +4,18 @@ import client3 from '../../assets/images/team-3.jpg';
 import quote from '../../assets/images/quote.png';
 import headingLine from '../../assets/images/line-dec.png';
 import './customers.scss';
+import i18next from "i18next";
 function Customers() {
     return (
     <>
-        <div id="clients" className="the-clients">
+        <div id="clients" className="the-clients py-3">
             <div className="container">
                 <div className="row justify-content-around">
                     <div className="col-lg-8">
                         <div className="section-title sc-title position-relative text-center mb-5 pb-2 wow fadeInUp"
                              data-wow-delay="0.1s">
                             <h6 className="position-relative d-inline text-primary ps-4">Our Clients</h6>
-                            <h2 className="mt-2">Check What <em>The Clients Say</em> About Our App Dev</h2>
+                            <h2 className="mt-2">{i18next.t('Our_Clients_paragraph1')}<em>{i18next.t('Our_Clients_paragraph2')}</em> {i18next.t('Our_Clients_paragraph3')}</h2>
                         </div>
                     </div>
                     <div className="col-lg-12">
@@ -27,11 +28,11 @@ function Customers() {
                                                 <div className="thumb">
                                                     <div className="row">
                                                         <div className="col-lg-4 col-sm-4 col-12">
-                                                            <h4>David Martino Co</h4>
+                                                            <h4>{i18next.t('Our_Clients_client1')}</h4>
                                                             <span className="date">30 November 2021</span>
                                                         </div>
                                                         <div className="col-lg-4 col-sm-4 d-none d-sm-block">
-                                                            <span className="category">Financial Apps</span>
+                                                            <span className="category">{i18next.t('Our_Clients_client1_App_name')}</span>
                                                         </div>
                                                         <div className="col-lg-4 col-sm-4 col-12">
                                                             <i className="fa fa-star"></i>
@@ -48,11 +49,11 @@ function Customers() {
                                                 <div className="thumb">
                                                     <div className="row">
                                                         <div className="col-lg-4 col-sm-4 col-12">
-                                                            <h4>Jake Harris Nyo</h4>
+                                                            <h4>{i18next.t('Our_Clients_client2')}</h4>
                                                             <span className="date">29 November 2021</span>
                                                         </div>
                                                         <div className="col-lg-4 col-sm-4 d-none d-sm-block">
-                                                            <span className="category">Digital Business</span>
+                                                            <span className="category">{i18next.t('Our_Clients_client2_App_name')}</span>
                                                         </div>
                                                         <div className="col-lg-4 col-sm-4 col-12">
                                                             <i className="fa fa-star"></i>
@@ -69,11 +70,11 @@ function Customers() {
                                                 <div className="thumb">
                                                     <div className="row">
                                                         <div className="col-lg-4 col-sm-4 col-12">
-                                                            <h4>May Catherina</h4>
+                                                            <h4>{i18next.t('Our_Clients_client1')}</h4>
                                                             <span className="date">27 November 2021</span>
                                                         </div>
                                                         <div className="col-lg-4 col-sm-4 d-none d-sm-block">
-                                                            <span className="category">Business &amp; Economics</span>
+                                                            <span className="category">{i18next.t('Our_Clients_client1_App_name')}</span>
                                                         </div>
                                                         <div className="col-lg-4 col-sm-4 col-12">
                                                             <i className="fa fa-star"></i>
@@ -90,11 +91,11 @@ function Customers() {
                                                 <div className="thumb">
                                                     <div className="row">
                                                         <div className="col-lg-4 col-sm-4 col-12">
-                                                            <h4>Random User</h4>
+                                                            <h4>{i18next.t('Our_Clients_client2')}</h4>
                                                             <span className="date">24 November 2021</span>
                                                         </div>
                                                         <div className="col-lg-4 col-sm-4 d-none d-sm-block">
-                                                            <span className="category">New App Ecosystem</span>
+                                                            <span className="category">{i18next.t('Our_Clients_client2_App_name')}</span>
                                                         </div>
                                                         <div className="col-lg-4 col-sm-4 col-12">
                                                             <i className="fa fa-star"></i>
@@ -111,11 +112,11 @@ function Customers() {
                                                 <div className="thumb">
                                                     <div className="row">
                                                         <div className="col-lg-4 col-sm-4 col-12">
-                                                            <h4>Mark Amber Do</h4>
+                                                            <span className="category">{i18next.t('Our_Clients_client2_App_name')}</span>
                                                             <span className="date">21 November 2021</span>
                                                         </div>
                                                         <div className="col-lg-4 col-sm-4 d-none d-sm-block">
-                                                            <span className="category">Web Development</span>
+                                                            <span className="category">{i18next.t('Our_Clients_client2_App_name')}</span>
                                                         </div>
                                                         <div className="col-lg-4 col-sm-4 col-12">
                                                             <i className="fa fa-star"></i>
@@ -138,19 +139,14 @@ function Customers() {
                                                         <div className="row">
                                                             <div className="col-lg-12">
                                                                 <div className="client-content">
-                                                                    <img src={quote} alt="" />
-                                                                        <p>“Lorem ipsum dolor sit amet, consectetur
-                                                                            adpiscing elit, sed do eismod tempor idunte
-                                                                            ut labore et dolore magna aliqua darwin
-                                                                            kengan
-                                                                            lorem ipsum dolor sit amet, consectetur
-                                                                            picing elit massive big blasta.”</p>
+                                                                    <img src={quote} alt={i18next.t('company_name')} />
+                                                                        <p>“{i18next.t('Our_Clients_op_text')}”</p>
                                                                 </div>
                                                                 <div className="down-content">
-                                                                    <img src={client1} alt="" />
+                                                                    <img src={client1} alt={i18next.t('company_name')} />
                                                                         <div className="right-content">
-                                                                            <h4>David Martino</h4>
-                                                                            <span>CEO of David Company</span>
+                                                                            <h4>{i18next.t('Our_Clients_client1')}</h4>
+                                                                            <span>{i18next.t('Our_Clients_client1_App_name')}</span>
                                                                         </div>
                                                                 </div>
                                                             </div>
@@ -164,19 +160,14 @@ function Customers() {
                                                         <div className="row">
                                                             <div className="col-lg-12">
                                                                 <div className="client-content">
-                                                                    <img src={quote} alt="" />
-                                                                        <p>“CTO, Lorem ipsum dolor sit amet, consectetur
-                                                                            adpiscing elit, sed do eismod tempor idunte
-                                                                            ut labore et dolore magna aliqua darwin
-                                                                            kengan
-                                                                            lorem ipsum dolor sit amet, consectetur
-                                                                            picing elit massive big blasta.”</p>
+                                                                    <img src={quote}  alt={i18next.t('company_name')} />
+                                                                        <p>“{i18next.t('Our_Clients_op_text')}”</p>
                                                                 </div>
                                                                 <div className="down-content">
-                                                                    <img src={client2} alt="" />
+                                                                    <img src={client2}  alt={i18next.t('company_name')} />
                                                                         <div className="right-content">
-                                                                            <h4>Jake H. Nyo</h4>
-                                                                            <span>CTO of Digital Company</span>
+                                                                            <h4>{i18next.t('Our_Clients_client2')}</h4>
+                                                                            <span>{i18next.t('Our_Clients_client2_App_name')}</span>
                                                                         </div>
                                                                 </div>
                                                             </div>
@@ -190,19 +181,14 @@ function Customers() {
                                                         <div className="row">
                                                             <div className="col-lg-12">
                                                                 <div className="client-content">
-                                                                    <img src={quote} alt="" />
-                                                                        <p>“May, Lorem ipsum dolor sit amet, consectetur
-                                                                            adpiscing elit, sed do eismod tempor idunte
-                                                                            ut labore et dolore magna aliqua darwin
-                                                                            kengan
-                                                                            lorem ipsum dolor sit amet, consectetur
-                                                                            picing elit massive big blasta.”</p>
+                                                                    <img src={quote}  alt={i18next.t('company_name')} />
+                                                                        <p>“{i18next.t('Our_Clients_op_text')}”</p>
                                                                 </div>
                                                                 <div className="down-content">
-                                                                    <img src={client2} alt="" />
+                                                                    <img src={client2}  alt={i18next.t('company_name')} />
                                                                         <div className="right-content">
-                                                                            <h4>May C.</h4>
-                                                                            <span>Founder of Catherina Co.</span>
+                                                                            <h4>{i18next.t('Our_Clients_client1')}</h4>
+                                                                            <span>{i18next.t('Our_Clients_client1_App_name')}</span>
                                                                         </div>
                                                                 </div>
                                                             </div>
@@ -216,19 +202,14 @@ function Customers() {
                                                         <div className="row">
                                                             <div className="col-lg-12">
                                                                 <div className="client-content">
-                                                                    <img src={quote} alt="" />
-                                                                        <p>“Lorem ipsum dolor sit amet, consectetur
-                                                                            adpiscing elit, sed do eismod tempor idunte
-                                                                            ut labore et dolore magna aliqua darwin
-                                                                            kengan
-                                                                            lorem ipsum dolor sit amet, consectetur
-                                                                            picing elit massive big blasta.”</p>
+                                                                    <img src={quote}  alt={i18next.t('company_name')} />
+                                                                        <p>“{i18next.t('Our_Clients_op_text')}”</p>
                                                                 </div>
                                                                 <div className="down-content">
-                                                                    <img src={client3} alt=""/>
+                                                                    <img src={client3}  alt={i18next.t('company_name')}/>
                                                                         <div className="right-content">
-                                                                            <h4>Random Staff</h4>
-                                                                            <span>Manager, Digital Company</span>
+                                                                            <h4>{i18next.t('Our_Clients_client2')}</h4>
+                                                                            <span>{i18next.t('Our_Clients_client2_App_name')}</span>
                                                                         </div>
                                                                 </div>
                                                             </div>
@@ -242,19 +223,14 @@ function Customers() {
                                                         <div className="row">
                                                             <div className="col-lg-12">
                                                                 <div className="client-content">
-                                                                    <img src={quote} alt=""/>
-                                                                        <p>“Mark, Lorem ipsum dolor sit amet,
-                                                                            consectetur adpiscing elit, sed do eismod
-                                                                            tempor idunte ut labore et dolore magna
-                                                                            aliqua darwin kengan
-                                                                            lorem ipsum dolor sit amet, consectetur
-                                                                            picing elit massive big blasta.”</p>
+                                                                    <img src={quote}  alt={i18next.t('company_name')}/>
+                                                                        <p>“{i18next.t('Our_Clients_op_text')}”</p>
                                                                 </div>
                                                                 <div className="down-content">
-                                                                    <img src={client1} alt="" />
+                                                                    <img src={client1}  alt={i18next.t('company_name')} />
                                                                         <div className="right-content">
-                                                                            <h4>Mark Am</h4>
-                                                                            <span>CTO, Amber Do Company</span>
+                                                                            <h4>{i18next.t('Our_Clients_client1')}</h4>
+                                                                            <span>{i18next.t('Our_Clients_client1_App_name')}</span>
                                                                         </div>
                                                                 </div>
                                                             </div>

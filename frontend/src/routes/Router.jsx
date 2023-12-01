@@ -17,7 +17,7 @@ import ContactPage from "../views/ContactPage.jsx";
     {
       path: '/about',
       element: <About />,
-        errorElement:<ErrorPage/>
+      errorElement:<ErrorPage/>
     },{
       path: '/service',
       element:<Service/>,
