@@ -1,16 +1,19 @@
-import React, {useState} from "react";
+import React, {Suspense, useState} from "react";
 import {RouterProvider} from "react-router-dom";
 import router from "./routes/Router.jsx";
 import {MainContext} from "./context/MainContext.jsx";
-import i18next from "i18next";
+import Spinner from "./components/Spinner.jsx";
 
 
 function App() {
     const [dir, setDir] = useState('ltr');
+
   return (
     <>
         <MainContext.Provider value={[dir, setDir]}>
-            <RouterProvider router={router} />
+            <Suspense fallback={ <Spinner /> }>
+                <RouterProvider router={router} />
+            </Suspense>
         </MainContext.Provider>
     </>
   )

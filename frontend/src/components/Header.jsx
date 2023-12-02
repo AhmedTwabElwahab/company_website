@@ -1,19 +1,20 @@
 import hero_image from '../assets/images/hero.png';
-import i18next from "i18next";
+import {useTranslation} from "react-i18next";
 function Header() {
+    const { t, i18n } = useTranslation();
 
-  return (
+    return (
     <>
         <div className=" py-5 primary-bg hero-header mb-5">
             <div className="container my-5 py-5 px-lg-5">
                 <div className="row g-5 py-5">
                     <div className="col-lg-6 text-center text-lg-start">
-                        <h1 className="text-white mb-4 animated zoomIn">{ i18next.t('main_header') }</h1>
-                        <p className="text-white pb-3 animated zoomIn">{i18next.t('main_paragraph')}</p>
-                        <a href="" className="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">{i18next.t('Contact')}</a>
+                        <h1 className="text-white mb-4 animated zoomIn">{ t('main_header') }</h1>
+                        <p className="text-white pb-3 animated zoomIn">{t('main_paragraph')}</p>
+                        <a href="" className="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">{t('Contact')}</a>
                     </div>
                     <div className="col-lg-6 text-center text-lg-start">
-                        <img className="img-fluid" src={hero_image} alt={i18next.t('company_name')}/>
+                        <img className="img-fluid" src={hero_image} alt={t('company_name')}/>
                     </div>
                 </div>
             </div>

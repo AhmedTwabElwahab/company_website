@@ -1,13 +1,17 @@
 import {Link} from "react-router-dom";
 import {useContext, useEffect, useState} from "react";
 import lang_icon from '../../assets/images/global.png';
-import i18next from "i18next";
+// import i18next from "i18next";
 import {MainContext} from "../../context/MainContext.jsx";
+import {useTranslation} from "react-i18next";
 
 function Navbar() {
    const [Active,setActive] = useState(location.pathname);
    const [Lang,setLang] = useState('en');
    const [ dir, setDir ] = useContext(MainContext);
+   const { t, i18n } = useTranslation();
+   document.body.dir = i18n.dir();
+
 
     const handelClick = (path) =>
     {
@@ -18,43 +22,37 @@ function Navbar() {
     }
     const changeLang = (lang) =>
     {
-        i18next.changeLanguage(lang).then((t)=>{});
+        i18n.changeLanguage(lang).then(r => r);
         setLang(lang);
 
         if (lang === 'ar')
         {
             document.documentElement.dir = "rtl";
             setDir("rtl");
-            localStorage.setItem('lang',"ar")
         }else
         {
             document.documentElement.dir = "ltr";
             setDir("ltr");
-            localStorage.setItem('lang',"en")
         }
-
     }
 
-    useEffect(()=>
+    useEffect(() =>
     {
-        let local_lang = localStorage.getItem('lang');
+        let currently_lang = localStorage.getItem('i18nextLng') || "en";
 
-        if (local_lang === 'ar')
+        if (currently_lang === 'ar')
         {
             document.documentElement.dir = "rtl";
+            document.documentElement.lang = "ar";
             setDir("rtl");
-            localStorage.setItem('lang',"ar")
-            i18next.changeLanguage('ar').then((t)=>{});
-            setLang('ar');
         }else
         {
             document.documentElement.dir = "ltr";
+            document.documentElement.lang = "en";
             setDir("ltr");
-            localStorage.setItem('lang',"en")
-            i18next.changeLanguage('en').then((t)=>{});
-            setLang('en');
         }
-    },[Lang])
+    },[dir]);
+
 
     return (
     <nav className={"navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 "}>
@@ -69,12 +67,12 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className={ (dir === 'ltr' ? 'ms-auto ': 'me-auto ') + "navbar-nav py-0"}>
-                <Link to={`/`} className={(Active === '/' ? 'active ' : '' ) + 'nav-item nav-link'} onClick={()=> handelClick('/')}>{i18next.t('home')}</Link>
-                <Link to={`/about`} className={(Active === '/about' ? 'active ' : '' ) + 'nav-item nav-link'} onClick={()=> handelClick('/about')} >{i18next.t('about')}</Link>
-                <Link to={`/service`} className={(Active === '/service' ? 'active ' : '' ) + 'nav-item nav-link'} onClick={()=> handelClick('/service')} >{i18next.t('Service')}</Link>
-                <Link to={`/project`} className={(Active === '/project' ? 'active ' : '' ) + 'nav-item nav-link'} onClick={()=> handelClick('/project')}>{i18next.t('project')}</Link>
-                <Link to={`/team`}    className={(Active === '/team' ? 'active ' : '' ) + 'nav-item nav-link'} onClick={()=> handelClick('/team')}>{i18next.t('team')}</Link>
-                <Link to={`/contact`} className={(Active === '/contact' ? 'active ' : '' ) + 'nav-item nav-link'} onClick={()=> handelClick('/contact')} >{i18next.t('Contact')}</Link>
+                <Link to={`/`} className={(Active === '/' ? 'active ' : '' ) + 'nav-item nav-link'} onClick={()=> handelClick('/')}>{t('home')}</Link>
+                <Link to={`/about`} className={(Active === '/about' ? 'active ' : '' ) + 'nav-item nav-link'} onClick={()=> handelClick('/about')} >{t('about')}</Link>
+                <Link to={`/service`} className={(Active === '/service' ? 'active ' : '' ) + 'nav-item nav-link'} onClick={()=> handelClick('/service')} >{t('Service')}</Link>
+                <Link to={`/project`} className={(Active === '/project' ? 'active ' : '' ) + 'nav-item nav-link'} onClick={()=> handelClick('/project')}>{t('project')}</Link>
+                <Link to={`/team`}    className={(Active === '/team' ? 'active ' : '' ) + 'nav-item nav-link'} onClick={()=> handelClick('/team')}>{t('team')}</Link>
+                <Link to={`/contact`} className={(Active === '/contact' ? 'active ' : '' ) + 'nav-item nav-link'} onClick={()=> handelClick('/contact')} >{t('Contact')}</Link>
                 <div className={'nav-item nav-link'}>
                     <div className="dropdown">
                         <Link to={''} className="text-white dropdown-toggle" role="button" id="dropdownMenuLink"
@@ -83,8 +81,8 @@ function Navbar() {
                         </Link>
 
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li ><Link to={''} className="dropdown-item" onClick={()=>{changeLang('en')}}>en</Link></li>
-                            <li><Link to={''} className="dropdown-item" onClick={()=>{changeLang('ar')}}>ar</Link></li>
+                            <li ><Link to={''} className="dropdown-item" onClick={()=>{changeLang('en')}}> en </Link></li>
+                            <li><Link to={''} className="dropdown-item" onClick={()=>{changeLang('ar')}}> ar </Link></li>
                         </ul>
                     </div>
                 </div>

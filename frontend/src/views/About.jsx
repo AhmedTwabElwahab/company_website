@@ -4,14 +4,16 @@ import AboutUsStyle from "../components/aboutUsStyle/AboutUsStyle.jsx";
 import HeaderStyle from "../components/HeaderStyle.jsx";
 import Newsletter from "../components/Newsletter.jsx";
 import Team from "../components/Team.jsx";
-import i18next from "i18next";
+import {useTranslation} from "react-i18next";
 function About() {
+    const { t, i18n } = useTranslation();
+
 
     return (
     <>
         <div className=" position-relative p-0">
             <Navbar/>
-            <HeaderStyle PageName={i18next.t('about_us')}/>
+            <HeaderStyle PageName={t('about_us')}/>
         </div>
         <AboutUsStyle/>
         <Newsletter/>
