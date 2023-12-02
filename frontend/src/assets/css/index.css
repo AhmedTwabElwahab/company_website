@@ -1,6 +1,7 @@
 /********** Template CSS **********/
 body
 {
+    font-family: 'Markazi Text', serif;
     overflow-x: hidden;
     overflow-y: auto;
 }

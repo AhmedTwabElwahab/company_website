@@ -9,7 +9,7 @@ function Services() {
                 <div className="section-title sc-title position-relative text-center mb-5 pb-2 wow fadeInUp"
                      data-wow-delay="0.1s">
                     <h6 className="position-relative d-inline text-primary ps-4">{i18next.t('Service')}</h6>
-                    <h2 className="mt-2">What Solutions We Provide</h2>
+                    <h2 className="mt-2">{i18next.t('services_main_paragraph')}</h2>
                 </div>
                 <div className="row g-4">
                     <div className="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">

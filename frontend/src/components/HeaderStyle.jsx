@@ -1,17 +1,18 @@
 import {Link} from "react-router-dom";
+import i18next from "i18next";
 
 function HeaderStyle({PageName}) {
 
   return (
     <>
-        <div className=" py-5 primary-bg hero-header mb-5">
+        <div className=" py-5 primary-bg hero-header">
             <div className="container my-5 py-5 px-lg-5">
                 <div className="row g-5 py-5">
                     <div className="col-12 text-center">
                         <h1 className="text-white animated zoomIn">{PageName}</h1>
                         <hr className="bg-white mx-auto mt-0" style={{width: '90px'}} />
                         <nav>
-                            <Link to={`/`} className="text-white">Home</Link>
+                            <Link to={`/`} className="text-white">{i18next.t('home')}</Link>
                             <Link to={``} className="text-white px-2">/</Link>
                             <Link to={``} className="text-white">{PageName}</Link>
                         </nav>
@@ -31,7 +32,7 @@ function HeaderStyle({PageName}) {
                     <div className="modal-body d-flex align-items-center justify-content-center">
                         <div className="input-group" style={{maxWidth: '600px'}}>
                             <input type="text" className="form-control bg-transparent border-light p-3"
-                                   placeholder="Type search keyword"/>
+                                   placeholder={i18next.t('search_placeholder')}/>
                                 <button className="btn btn-light px-4">
                                     <i className="bi bi-search"></i>
                                 </button>

@@ -19,6 +19,17 @@
     "about_h6_sc4": "Fair Prices",
     "about_button": "Read More",
 
+    "about2_header1" : "About ",
+    "about2_header2" : "What We Do",
+    "about2_header3" : "Who We Are",
+    "about2_paragraph" : "Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet",
+    "about2_h4_sc1": "Maintance Problems",
+    "about2_h4_sc2": "Fixing Issues About",
+    "about2_h4_sc3": "24/7 Support",
+    "about2_h4_sc4": "Co. Development",
+    "about2_paragraph2": "Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet",
+
+
     "newsletter_header": "Ready to get started",
     "newsletter_paragraph": "Diam elitr est dolore at sanctus nonumy.",
     "enter_email" : "Enter Your Email",
@@ -70,7 +81,22 @@
     "footer_2_h5": "Popular Link",
     "footer_3_h5": "Project Gallery",
     "footer_4_h5": "Newsletter",
-    "footer_4_p": "Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte kengan lorem ipsum dolor sit amet, consectetur picing elit massive big blasta."
+    "footer_4_p": "Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte kengan lorem ipsum dolor sit amet, consectetur picing elit massive big blasta.",
+
+    "search_placeholder": "Type search keyword",
+    "not_found" : "Not Found",
+    "not_found_p" : "We’re sorry, the page you have looked for does not exist in our website! Maybe go to our home page .",
+    "not_found_button" : "Go Back To Home",
+
+    "contact_p" : "Contact For Any Query",
+    "contact_name" : "Your Name",
+    "contact_Email" : "Your Email",
+    "contact_Subject" : "Subject",
+    "contact_Message" : "Message",
+    "contact_Message_placeholder" : "Leave a message here",
+    "contact_SMessage" : "Send Message"
+
+
 
 
 }

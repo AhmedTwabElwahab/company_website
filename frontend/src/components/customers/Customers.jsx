@@ -14,7 +14,7 @@ function Customers() {
                     <div className="col-lg-8">
                         <div className="section-title sc-title position-relative text-center mb-5 pb-2 wow fadeInUp"
                              data-wow-delay="0.1s">
-                            <h6 className="position-relative d-inline text-primary ps-4">Our Clients</h6>
+                            <h6 className="position-relative d-inline text-primary ps-4">{i18next.t('Our_Clients')}</h6>
                             <h2 className="mt-2">{i18next.t('Our_Clients_paragraph1')}<em>{i18next.t('Our_Clients_paragraph2')}</em> {i18next.t('Our_Clients_paragraph3')}</h2>
                         </div>
                     </div>
@@ -95,7 +95,7 @@ function Customers() {
                                                             <span className="date">24 November 2021</span>
                                                         </div>
                                                         <div className="col-lg-4 col-sm-4 d-none d-sm-block">
-                                                            <span className="category">{i18next.t('Our_Clients_client2_App_name')}</span>
+                                                            <span className="category"> {i18next.t('Our_Clients_client2_App_name')} </span>
                                                         </div>
                                                         <div className="col-lg-4 col-sm-4 col-12">
                                                             <i className="fa fa-star"></i>
@@ -112,7 +112,7 @@ function Customers() {
                                                 <div className="thumb">
                                                     <div className="row">
                                                         <div className="col-lg-4 col-sm-4 col-12">
-                                                            <span className="category">{i18next.t('Our_Clients_client2_App_name')}</span>
+                                                            <h4 className="category">{i18next.t('Our_Clients_client2_App_name')}</h4>
                                                             <span className="date">21 November 2021</span>
                                                         </div>
                                                         <div className="col-lg-4 col-sm-4 d-none d-sm-block">

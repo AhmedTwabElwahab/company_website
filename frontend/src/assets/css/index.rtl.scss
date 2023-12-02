@@ -88,4 +88,11 @@ html[dir='rtl'] {
         border-left: 0 solid transparent;
         border-bottom: 50px solid #ffffff;
     }
+
+    .dropdown-toggle::after
+    {
+        margin-right: 0.255em;
+        border-left: 0.3em solid transparent;
+        border-right: 0.3em solid transparent;
+    }
 }
